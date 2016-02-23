@@ -30,9 +30,8 @@ $sqlconfs = array(
 );
 try {
     $async = new \redoufu\AsyncMysqli($dbconf['host'], $dbconf['user'], $dbconf['password'], $dbconf['database'], $dbconf['port']);
-    $re1 = $async->query($sqlconfs);
-    $re2 = $async->query($sqlconfs);
-    var_dump($re1, $re2);
+    $re = $async->query($sqlconfs);
+    var_dump($re);
 } catch (\Exception $e) {
     die($e->getMessage() . "\n");
 }
